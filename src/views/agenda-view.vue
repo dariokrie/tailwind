@@ -11,26 +11,26 @@ interface AgendaEntry {
 
 const agendaEntries = ref<AgendaEntry[]>([
   {
-    date: '20-09-2024',
-    event: 'ONE LIFE X USHUAÏA',
-    location: 'IBIZA',
-    status: 'TICKETS',
-    flag: '🇪🇸',
+    date: '30-10-2024',
+    event: 'Radio 01',
+    location: 'Studio @SOHIM',
+    status: 'INVITE ONLY',
+    flag: '🇨🇭',
   },
   {
-    date: '20-09-2024',
-    event: 'LIMELIGHT',
-    location: 'BELFAST',
-    status: 'TICKETS',
-    flag: '🇬🇧',
+    date: '31-12-2024',
+    event: 'NYES 04',
+    location: 'Lucerne Homeparty',
+    status: 'INVITE ONLY',
+    flag: '🇨🇭',
   },
   {
-    date: '21-09-2024',
-    event: 'DISTRICT X FESTIVAL',
-    location: 'DUBLIN',
-    status: 'SOLD OUT',
-    flag: '🇮🇪',
-  },
+    date: '31-01-2025',
+    event: 'Radio 02 by Midas Heijdra',
+    location: '',
+    status: '',
+    flag: '',
+  }
 ]);
 
 </script>

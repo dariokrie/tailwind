@@ -6,33 +6,24 @@ interface UpdateEntry {
   title: string;
   description: string;
   imageUrl: string;
+  href: string;
 }
 
 const updates = ref<UpdateEntry[]>([
   {
-    date: '25-08-2024',
-    title: 'LIVE SET @ ELECTRO HAVEN',
-    description: 'A 2-hour electrifying live set at Electro Haven, bringing fresh beats to an epic crowd!',
-    imageUrl: 'https://example.com/electrohaven.jpg',
+    date: '01-01-2025',
+    title: 'Eclipse Boundaries NYES 04 by SOHIM',
+    description: 'NYES (New Years Eve Sets) brings the New Year to life with exclusive DJ mixes. Each year, a single mix is crafted and released on SoundCloud under our label, Eclipse Boundaries. These sets capture the energy of celebration and transition. With one release per year, NYES delivers a unique and unforgettable way to welcome the year ahead.',
+    imageUrl: 'https://i1.sndcdn.com/artworks-8ORzWo1tx5AHadzv-19BXmg-t500x500.jpg',
+    href: 'https://soundcloud.com/eclipse_boundaries/nyes-04-by-sohim?si=354c0da4e72d4672ae58027daa6b9178&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'
   },
   {
-    date: '10-07-2024',
-    title: 'SUMMER BEATS MIX VOL. 5',
-    description: 'The latest installment of the Summer Beats series is here. Perfect for sunny vibes and good times.',
-    imageUrl: 'https://example.com/summerbeats.jpg',
-  },
-  {
-    date: '14-02-2024',
-    title: 'BEHIND THE SCENES: TOURING IN EUROPE',
-    description: 'A deep dive into the challenges and excitement of my 2024 European tour, from sold-out shows to new collaborations.',
-    imageUrl: 'https://example.com/eurotour.jpg',
-  },
-  {
-    date: '02-11-2023',
-    title: 'STUDIO SESSIONS: NEW ALBUM TEASER',
-    description: 'Get a sneak peek at my upcoming album with exclusive behind-the-scenes studio sessions.',
-    imageUrl: 'https://example.com/studiosession.jpg',
-  },
+    date: '30-11-2024',
+    title: 'Eclipse Boundaries Radio 01 by SOHIM & Fabium',
+    description: 'We are excited to release the first episode of Eclipse Boundaries Radio. Now up on our SoundCloud!',
+    imageUrl: 'https://i1.sndcdn.com/artworks-sV8aJWQe74xmJgzV-Tj53TQ-t500x500.jpg',
+    href: 'https://soundcloud.com/eclipse_boundaries/eclipse-boundaries-radio-01-by-sohim-fabium?si=e3f8cf9878ba48e3b1f874a7c3c0e623&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'
+  }
 ]);
 
 
@@ -43,11 +34,11 @@ const updates = ref<UpdateEntry[]>([
     <h2 class="text-3xl font-bold mb-8 text-center">UPDATES</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       <div v-for="(update, index) in updates" :key="index" class="space-y-2">
-        <img :src="update.imageUrl" alt="update image" class="w-full h-56 object-cover" />
+        <img :src="update.imageUrl" alt="update image" class="w-59 h-59 object-cover" />
         <div class="text-sm text-gray-600">{{ update.date }}</div>
         <h3 class="text-lg font-semibold">{{ update.title }}</h3>
         <p class="text-sm text-gray-600">{{ update.description }}</p>
-        <a href="#" class="text-sm text-blue-600 font-semibold hover:underline">READ MORE</a>
+        <a :href="update.href" class="text-sm text-blue-600 font-semibold hover:underline">READ MORE</a>
       </div>
     </div>
     <button class="mt-8 px-4 py-2 border border-gray-400 hover:border-gray-600 transition-colors text-sm mx-auto block">
